@@ -16,7 +16,6 @@ export async function POST(request: Request) {
       );
     }
     else if (user.isVerified) {
-      console.log("isVerified:", user.isVerified, typeof user.isVerified);
       return Response.json(
         { success: false, message: "User is already verified" },
         { status: 400 },
